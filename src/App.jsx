@@ -15,7 +15,8 @@ import './App.css';
 
 export default class App extends Component {
   state = {
-    transactions: []
+    transactions: [],
+    
   }
 
   loadData = () => {
@@ -73,6 +74,7 @@ export default class App extends Component {
     // this.loadData();   // load data from variable
     //this.loadJsonData();  // load data from JSON file on server
     this.loadFirebase(); // load data from Firebase
+    
   }
 
   validateForm = (name,amount) => {
@@ -86,7 +88,7 @@ export default class App extends Component {
       window.alert('Amount CANNOT be zero!');
       return false;
     } else if(!Number.isInteger(+amount)){
-      window.alert('Amount Must be Integer!');
+      window.alert('Please fill only Integer in Amount field.');
       return false;
     }
   
